@@ -25,7 +25,13 @@ fig2,ax2 = plt.subplots()
 level_map = np.linspace(np.min(Z), np.max(Z),res)
 cp = ax2.contour(X, Y, Z, levels=level_map,cmap=cm.cool)
 fig2.colorbar(cp)
-ax2.set_title('Countour lines')
+ax2.set_title('Level curves')
+
+
+fig3,ax3 = plt.subplots()
+cp = ax3.contourf(X, Y, Z, levels=level_map,cmap=cm.cool)
+fig3.colorbar(cp)
+ax3.set_title('Level colors')
 plt.show()
 
 
